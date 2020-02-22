@@ -1,68 +1,26 @@
 // @flow
 
-// @flow
-
-import React, { useCallback, useState } from "react";
-import youShellNotPass from "../../assets/youShallNotPass.jpeg";
-import "../App.css";
-import useWindowSize from "../hooks/useWindowSize";
-import helpers from "../helper";
+import React  from "react";
+import * as youShellNotPass from "../assets/youShallNotPass.jpeg";
 
 // material ui could be here, but it's redundant for this project
 const styles = {
-    catchMeField: {
-        backgroundColor: "green",
-        width: 100,
-        height: 100,
-        borderRadius: 50,
-        position: "absolute",
+    root: {
         display: "flex",
+        flexDirection: "column",
         justifyContent: "center",
         alignItems: "center"
     }
 };
 
-const TryCatchMe = () => {
-    const windowSize = useWindowSize();
-
-    const [shift, setShift] = useState([0, 0]);
-    const catchMeFieldStyle = {
-        ...styles.catchMeField,
-        left: shift[0],
-        top: shift[1]
-    };
-
-    const onHover = useCallback(() => {
-        const leftShift = helpers.getShift(
-            windowSize[0],
-            styles.catchMeField.width
-        );
-        const topShift = helpers.getShift(
-            windowSize[1],
-            styles.catchMeField.height
-        );
-
-        setShift([leftShift, topShift]);
-    }, [windowSize]);
+const YouShellNotPass = () => {
+    // before image turned around like react app logo. It was really fun, but you can't come through the Gandalf.
     return (
-        <div className="App">
-            <header className="App-header">
-                <img src={youShellNotPass} className="App-logo" alt="logo" />
-                <div style={catchMeFieldStyle} onMouseEnter={onHover}>Click me</div>
-                <p>
-                    Edit <code>src/App.js</code> and save to reload.
-                </p>
-                <a
-                    className="App-link"
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Learn React
-                </a>
-            </header>
+        <div style={styles.root}>
+            {/*// can specify the size of picture if want*/}
+            <img src={youShellNotPass} className="App-logo" alt="logo" />
         </div>
     );
-}
+};
 
-export default TryCatchMe;
+export default YouShellNotPass;
