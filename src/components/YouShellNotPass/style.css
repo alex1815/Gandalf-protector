@@ -1,0 +1,23 @@
+.Gandalf-image {
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .Gandalf-image{
+        animation: Gandalf-image-spin infinite 10s linear;
+    }
+}
+
+
+@keyframes Gandalf-image-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
