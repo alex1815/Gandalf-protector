@@ -14,7 +14,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "flow": "flow",
+    "postinstall": "flow-typed install jest@25"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -30,5 +32,14 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn test && pretty-quick --staged"
+    }
+  },
+  "devDependencies": {
+    "flow-bin": "^0.118.0",
+    "husky": "^4.2.3"
   }
 }
