@@ -16,8 +16,14 @@ const YouShellNotPass = ({ somebodyTryToPassAmount }: YouShellNotPassProps) => {
 
     useEffect(() => {
         // after somebody try to pass need to ask Gandalf to protect this enter
-        setGandalfProtectThisEnter(true);
-        const timerID = setTimeout(() => setGandalfProtectThisEnter(false),  PROTECTION_TIME * 1000);
+        if (somebodyTryToPassAmount) {
+            setGandalfProtectThisEnter(true);
+        }
+        console.log('pro');
+        const timerID = setTimeout(() => {
+            setGandalfProtectThisEnter(false)
+            console.log('exit');
+        },  PROTECTION_TIME * 1000);
         return () => clearTimeout(timerID);
     }, [somebodyTryToPassAmount]);
 
@@ -26,9 +32,11 @@ const YouShellNotPass = ({ somebodyTryToPassAmount }: YouShellNotPassProps) => {
     }
     // before image turned around like react app logo. It was really fun, but you can't come through the Gandalf.
     return (
-        <div className={'Gandalf-image'}>
-            {/*// can specify the size of picture if want*/}
-            <img src={youShellNotPass} alt="Gandalf on guard" />
+        <div className={'Gandalf-container'}>
+            <div className={'Gandalf-image'}>
+                {/*// can specify the size of picture if want*/}
+                <img src={youShellNotPass} alt="Gandalf on guard" />
+            </div>
         </div>
     );
 };
