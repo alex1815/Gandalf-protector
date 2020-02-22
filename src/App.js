@@ -18,7 +18,7 @@ const styles = {
   }
 };
 
-function App() {
+const App = () => {
   const windowSize = useWindowSize();
 
   const [shift, setShift] = useState([0, 0]);
@@ -59,6 +59,6 @@ function App() {
       </header>
     </div>
   );
-}
+};
 
 export default App;

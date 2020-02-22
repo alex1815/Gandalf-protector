@@ -33,11 +33,6 @@
       "last 1 safari version"
     ]
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn test && pretty-quick --staged"
-    }
-  },
   "devDependencies": {
     "flow-bin": "^0.118.0",
     "husky": "^4.2.3"
