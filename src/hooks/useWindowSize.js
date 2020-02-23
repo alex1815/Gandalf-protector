@@ -1,4 +1,5 @@
 //@flow
+
 import { useLayoutEffect, useState } from "react";
 
 const useWindowSize = () => {

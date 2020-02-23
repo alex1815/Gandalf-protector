@@ -1,7 +1,7 @@
 // @flow
 
 import React, { useCallback, useState } from "react";
-import TryCatchMe from "./components/TryCatchMe";
+import TryCatchMe from "./components/TryCatchMe/TryCatchMe";
 import YouShellNotPass from "./components/YouShellNotPass/YouShellNotPass";
 
 const App = () => {

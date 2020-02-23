@@ -1,10 +1,10 @@
 // @flow
 
 import React, { useCallback, useState } from "react";
-import useWindowSize from "../hooks/useWindowSize";
-import helpers from "../helper";
+import useWindowSize from "../../hooks/useWindowSize";
+import helpers from "../../helper";
 
-// material ui could be here, but it's redundant for this project
+// material ui with styling could be here, but it's redundant for this project. Used material-style syntax without provider
 const styles = {
   root: {
     backgroundColor: "green",
