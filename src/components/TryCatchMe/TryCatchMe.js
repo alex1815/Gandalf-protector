@@ -20,6 +20,9 @@ const styles = {
   }
 };
 
+// intl could be here
+export const COME_IN_TEXT = "Come in";
+
 type TryCatchMeProps = {
   somebodyTryingToPass: () => void
 };
@@ -27,7 +30,7 @@ type TryCatchMeProps = {
 const TryCatchMe = ({ somebodyTryingToPass }: TryCatchMeProps) => {
   const windowSize = useWindowSize();
 
-  const [shift, setShift] = useState([0, 0]);
+  const [shift, setShift] = useState([windowSize[0] / 2, windowSize[1] / 2]);
   const catchMeFieldStyle = {
     ...styles.root,
     left: shift[0],
@@ -35,7 +38,6 @@ const TryCatchMe = ({ somebodyTryingToPass }: TryCatchMeProps) => {
   };
 
   const onHover = useCallback(() => {
-    console.log("ghovef");
     const leftShift = helpers.getShift(windowSize[0], styles.root.width);
     const topShift = helpers.getShift(windowSize[1], styles.root.height);
 
@@ -44,7 +46,7 @@ const TryCatchMe = ({ somebodyTryingToPass }: TryCatchMeProps) => {
   }, [somebodyTryingToPass, windowSize]);
   return (
     <div style={catchMeFieldStyle} onMouseEnter={onHover}>
-      Come in
+      {COME_IN_TEXT}
     </div>
   );
 };
