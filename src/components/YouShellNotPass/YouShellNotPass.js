@@ -23,7 +23,7 @@ const YouShellNotPass = ({ somebodyTryToPassAmount }: YouShellNotPassProps) => {
     if (somebodyTryToPassAmount) {
       setGandalfProtectThisEnter(true);
     }
-    console.log("pro");
+    console.log("start protecting");
     const timerID = setTimeout(() => {
       setGandalfProtectThisEnter(false);
       console.log("exit");

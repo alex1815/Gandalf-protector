@@ -3,7 +3,7 @@ import React from "react";
 import { render, fireEvent } from "@testing-library/react";
 import TryCatchMe, { COME_IN_TEXT } from "./TryCatchMe";
 
-test("TryCatchMe is moving", () => {
+it("TryCatchMe is moving", () => {
   let amountOfTrying = jest.fn();
   const { getByText } = render(
     <TryCatchMe somebodyTryingToPass={amountOfTrying} />
