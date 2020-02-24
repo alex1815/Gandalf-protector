@@ -1,0 +1,14 @@
+dockerfile
+.dockerignore
+.DS_Store
+.gitignore
+.flowconfig
+README.md
+
+node_modules
+build
+flow-typed
+.git
+.idea
+
+**.test.js
