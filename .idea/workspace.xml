@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d31ed906-fcc3-4cf5-bb0f-205745001284" name="Default Changelist" comment="* Added Gandalf">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="d31ed906-fcc3-4cf5-bb0f-205745001284" name="Default Changelist" comment="* Fixed todo">
+      <change afterPath="$PROJECT_DIR$/src/components/GendalfProtected/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/YouShellNotPass/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/YouShellNotPass.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/YouShellNotPass.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TryCatchMe/TryCatchMe.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TryCatchMe/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TryCatchMe/TryCatchMe.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TryCatchMe/TryCatchMe.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/YouShellNotPass/YouShellNotPass.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/YouShellNotPass/YouShellNotPass.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/YouShellNotPass/YouShellNotPass.js" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,6 +21,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="CSS File" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -29,7 +34,7 @@
     <service-enabled>true</service-enabled>
     <exe-path>$PROJECT_DIR$/node_modules/flow-bin</exe-path>
     <other-services-enabled>true</other-services-enabled>
-    <auto-save>true</auto-save>
+    <auto-save>false</auto-save>
   </component>
   <component name="ProjectId" id="1YA6nB5WMcsPTJjn8GlCBN7BSrv" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -37,23 +42,27 @@
     <property name="NewWatcherDialog.advanced.open" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$/node_modules/prettier" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="watcher.settings" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.completion" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src" />
-      <recent name="$PROJECT_DIR$/src/components/YouShellNotPass" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/TryCatchMe" />
       <recent name="$PROJECT_DIR$/src/components" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/TryCatchMe" />
+      <recent name="$PROJECT_DIR$/src/components/YouShellNotPass" />
+      <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -94,7 +103,11 @@
       <option name="presentableId" value="Default" />
       <updated>1582373215935</updated>
       <workItem from="1582373217072" duration="6150000" />
-      <workItem from="1582379701828" duration="3837000" />
+      <workItem from="1582379701828" duration="6122000" />
+      <workItem from="1582446374995" duration="4527000" />
+      <workItem from="1582474917232" duration="10276000" />
+      <workItem from="1585894098416" duration="1000" />
+      <workItem from="1586085159191" duration="4360000" />
     </task>
     <task id="LOCAL-00001" summary="* Initial commit&#10;* Added simple implementation with tests">
       <created>1582380882410</created>
@@ -124,7 +137,77 @@
       <option name="project" value="LOCAL" />
       <updated>1582382411740</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="* Added Gandalf">
+      <created>1582383760184</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1582383760184</updated>
+    </task>
+    <task id="LOCAL-00006" summary="* Gandalf protect the enter">
+      <created>1582384932687</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1582384932687</updated>
+    </task>
+    <task id="LOCAL-00007" summary="* Gandalf protect the enter">
+      <created>1582386087875</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1582386087875</updated>
+    </task>
+    <task id="LOCAL-00008" summary="* Fixed todo">
+      <created>1582447117034</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1582447117034</updated>
+    </task>
+    <task id="LOCAL-00009" summary="* Fixed todo">
+      <created>1582447229516</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1582447229516</updated>
+    </task>
+    <task id="LOCAL-00010" summary="* Small refactoring">
+      <created>1582447703506</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1582447703506</updated>
+    </task>
+    <task id="LOCAL-00011" summary="* Added tryCatchMe test">
+      <created>1582449435162</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1582449435162</updated>
+    </task>
+    <task id="LOCAL-00012" summary="* Added integration test">
+      <created>1582450428563</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1582450428563</updated>
+    </task>
+    <task id="LOCAL-00013" summary="* Fixed test names">
+      <created>1582480225096</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1582480225096</updated>
+    </task>
+    <task id="LOCAL-00014" summary="* Added docker">
+      <created>1582563272989</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1582563272989</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,6 +236,13 @@
     <MESSAGE value="* Initial commit&#10;* Added simple implementation with tests" />
     <MESSAGE value="* Initial commit&#10;* Added simple implementation with tests&#10;* Added some structure" />
     <MESSAGE value="* Added Gandalf" />
-    <option name="LAST_COMMIT_MESSAGE" value="* Added Gandalf" />
+    <MESSAGE value="* Gandalf protect the enter" />
+    <MESSAGE value="* Fixed todo" />
+    <MESSAGE value="* Small refactoring" />
+    <MESSAGE value="* Added tryCatchMe test" />
+    <MESSAGE value="* Added integration test" />
+    <MESSAGE value="* Fixed test names" />
+    <MESSAGE value="* Added docker" />
+    <option name="LAST_COMMIT_MESSAGE" value="* Added docker" />
   </component>
 </project>

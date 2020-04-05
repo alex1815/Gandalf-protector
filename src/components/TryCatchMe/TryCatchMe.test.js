@@ -1,7 +1,7 @@
 //@flow
 import React from "react";
 import { render, fireEvent } from "@testing-library/react";
-import TryCatchMe, { COME_IN_TEXT } from "./TryCatchMe";
+import TryCatchMe, { COME_IN_TEXT } from "./index";
 
 it("TryCatchMe is moving", () => {
   let amountOfTrying = jest.fn();

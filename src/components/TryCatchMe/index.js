@@ -45,7 +45,7 @@ const TryCatchMe = ({ somebodyTryingToPass }: TryCatchMeProps) => {
     somebodyTryingToPass();
   }, [somebodyTryingToPass, windowSize]);
   return (
-    <div style={catchMeFieldStyle} onMouseEnter={onHover}>
+    <div style={catchMeFieldStyle} onMouseMove={onHover}>
       {COME_IN_TEXT}
     </div>
   );

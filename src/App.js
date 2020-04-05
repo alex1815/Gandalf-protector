@@ -1,19 +1,39 @@
 // @flow
 
 import React, { useCallback, useState } from "react";
-import TryCatchMe from "./components/TryCatchMe/TryCatchMe";
-import YouShellNotPass from "./components/YouShellNotPass/YouShellNotPass";
+import TryCatchMe from "./components/TryCatchMe";
+import YouShellNotPass from "./components/YouShellNotPass";
+import GandalfProtected from "./components/GendalfProtected";
 
 const App = () => {
   const [numberOfTrying, setNumberOfTrying] = useState<number>(0);
-  const somebodyTryingToPass = useCallback(
-    () => setNumberOfTrying(numberOfTrying + 1),
-    [numberOfTrying, setNumberOfTrying]
-  );
+  const [
+    isSomebodyTryingToEnter,
+    setIsSomebodyTryingToEnter
+  ] = useState<boolean>(false);
+  const [wasProtected, setWasProtected] = useState<boolean>(false);
+
+  const somebodyTryingToPass = useCallback(() => {
+    setNumberOfTrying(prev => prev + 1);
+    setIsSomebodyTryingToEnter(true);
+  }, [setNumberOfTrying, setIsSomebodyTryingToEnter]);
+
   return (
     <div className="App">
-      <TryCatchMe somebodyTryingToPass={somebodyTryingToPass} />
-      <YouShellNotPass somebodyTryToPassAmount={numberOfTrying} />
+      {wasProtected ? (
+        <GandalfProtected numberOfTrying={numberOfTrying} />
+      ) : (
+        <>
+          <TryCatchMe somebodyTryingToPass={somebodyTryingToPass} />
+          <YouShellNotPass
+            isSomebodyTryingToEnter={isSomebodyTryingToEnter}
+            setIsSomebodyTryingToEnter={setIsSomebodyTryingToEnter}
+            setWasProtected={setWasProtected}
+            numberOfTrying={numberOfTrying}
+          />
+          <span>{numberOfTrying}</span>
+        </>
+      )}
     </div>
   );
 };

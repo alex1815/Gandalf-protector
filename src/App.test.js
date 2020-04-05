@@ -8,8 +8,8 @@ import {
   waitForElementToBeRemoved
 } from "@testing-library/react";
 import App from "./App";
-import { COME_IN_TEXT } from "./components/TryCatchMe/TryCatchMe";
-import { YOU_SHELL_NOT_PASS_DATA_TEST_ID } from "./components/YouShellNotPass/YouShellNotPass";
+import { COME_IN_TEXT } from "./components/TryCatchMe";
+import { YOU_SHELL_NOT_PASS_DATA_TEST_ID } from "./components/YouShellNotPass";
 
 it("Basic app render without crash", () => {
   const { container } = render(<App />);
