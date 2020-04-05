@@ -6,8 +6,7 @@ import YouShellNotPass from "./components/YouShellNotPass";
 import GandalfProtected from "./components/GendalfProtected";
 import GendalfDefeated from "./components/GendalfDefeated";
 import Counter from "./components/Counter";
-
-export const YOU_PASSED_AMOUNT = 100;
+import { YOU_PASSED_AMOUNT } from "./service/calculateDifficalty";
 
 const App = () => {
   const [numberOfTrying, setNumberOfTrying] = useState<number>(0);

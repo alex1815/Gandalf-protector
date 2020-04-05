@@ -2,7 +2,10 @@
 
 import React, { useEffect } from "react";
 import * as youShellNotPass from "../../assets/youShallNotPass.jpeg";
-import { calculateTimeAccordingNumberOfTrying } from "../../service/calculateDifficalty";
+import {
+  calculateTimeAccordingNumberOfTrying,
+  getRatio
+} from "../../service/calculateDifficalty";
 import "./YouShellNotPass.css";
 
 export const YOU_SHELL_NOT_PASS_DATA_TEST_ID =
@@ -22,7 +25,7 @@ const YouShellNotPass = ({
   numberOfTrying
 }: YouShellNotPassProps) => {
   const protectionTime = calculateTimeAccordingNumberOfTrying(numberOfTrying);
-  // const ratio = Math.min(maxWidth / 320, maxHeight / 160);
+  const ratio = getRatio(numberOfTrying);
 
   useEffect(() => {
     console.log(protectionTime);
@@ -54,7 +57,12 @@ const YouShellNotPass = ({
       data-testid={YOU_SHELL_NOT_PASS_DATA_TEST_ID}
     >
       <div className={"Gandalf-image"}>
-        <img src={youShellNotPass} alt="Gandalf on guard" />
+        <img
+          src={youShellNotPass}
+          alt="Gandalf on guard"
+          width={ratio * 320}
+          height={ratio * 160}
+        />
       </div>
     </div>
   );
