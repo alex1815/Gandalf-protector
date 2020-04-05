@@ -1,6 +1,6 @@
 // @flow
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import * as youShellNotPass from "../../assets/youShallNotPass.jpeg";
 import "./YouShellNotPass.css";
 
@@ -30,6 +30,8 @@ const YouShellNotPass = ({
     numberOfTrying > DIFFICULTY_LEVEL_FOR_START
       ? Math.round(DEFAULT_PROTECTION_TIME / Math.log(numberOfTrying))
       : DEFAULT_PROTECTION_TIME;
+
+  // var ratio = Math.min(maxWidth / srcWidth, maxHeight / srcHeight);
 
   useEffect(() => {
     console.log(protectionTime);

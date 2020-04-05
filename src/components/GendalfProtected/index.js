@@ -1,6 +1,7 @@
 // @flow
 
 import React, { memo } from "react";
+import "./GandalfProtected.css";
 
 type GandalfProtectedProps = {
   numberOfTrying: number
@@ -11,7 +12,11 @@ ${numberOfTrying} times`;
 
 function GandalfProtected(props: GandalfProtectedProps) {
   const { numberOfTrying } = props;
-  return <span>{get_RESULT_MESSAGE(numberOfTrying)}</span>;
+  return (
+    <span className={"Gandalf-Protected-container-message"}>
+      {get_RESULT_MESSAGE(numberOfTrying)}
+    </span>
+  );
 }
 
 export default memo<*>(GandalfProtected);

@@ -4,6 +4,7 @@ import React, { useCallback, useState } from "react";
 import TryCatchMe from "./components/TryCatchMe";
 import YouShellNotPass from "./components/YouShellNotPass";
 import GandalfProtected from "./components/GendalfProtected";
+import Counter from "./components/Counter";
 
 const App = () => {
   const [numberOfTrying, setNumberOfTrying] = useState<number>(0);
@@ -31,7 +32,7 @@ const App = () => {
             setWasProtected={setWasProtected}
             numberOfTrying={numberOfTrying}
           />
-          <span>{numberOfTrying}</span>
+          <Counter numberOfTrying={numberOfTrying} />
         </>
       )}
     </div>
