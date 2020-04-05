@@ -2,11 +2,8 @@
 
 import React, { useEffect } from "react";
 import * as youShellNotPass from "../../assets/youShallNotPass.jpeg";
+import { calculateTimeAccordingNumberOfTrying } from "../../service/calculateDifficalty";
 import "./YouShellNotPass.css";
-
-const DEFAULT_PROTECTION_TIME = 3;
-// How many times use default protection time. Can't be less than 2 (due log function)
-const DIFFICULTY_LEVEL_FOR_START = 3;
 
 export const YOU_SHELL_NOT_PASS_DATA_TEST_ID =
   "YOU_SHELL_NOT_PASS_DATA_TEST_ID";
@@ -24,14 +21,8 @@ const YouShellNotPass = ({
   setWasProtected,
   numberOfTrying
 }: YouShellNotPassProps) => {
-  // const [timerProtectionID, setTimerProtectionID] = useState<?TimeoutID>();
-  // move to separate function
-  const protectionTime =
-    numberOfTrying > DIFFICULTY_LEVEL_FOR_START
-      ? Math.round(DEFAULT_PROTECTION_TIME / Math.log(numberOfTrying))
-      : DEFAULT_PROTECTION_TIME;
-
-  // var ratio = Math.min(maxWidth / srcWidth, maxHeight / srcHeight);
+  const protectionTime = calculateTimeAccordingNumberOfTrying(numberOfTrying);
+  // const ratio = Math.min(maxWidth / 320, maxHeight / 160);
 
   useEffect(() => {
     console.log(protectionTime);
